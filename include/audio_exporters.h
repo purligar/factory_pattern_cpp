@@ -5,25 +5,26 @@
 #ifndef FACTORY_PATTERN_CPP_INCLUDE_AUDIO_EXPORTERS_H_
 #define FACTORY_PATTERN_CPP_INCLUDE_AUDIO_EXPORTERS_H_
 #include "audio_exporter_abstract.h"
-#include "spdlog/spdlog.h"
+//#include "spdlog/spdlog.h"
+#include <iostream>
 
 struct AACAudioExporter final : public AudioExporter {
   void PrepareExport(std::string_view data) override {
-    spdlog::info("Preparing audio data for AAC export.");
+    std::cout <<"Preparing audio data for AAC export." << std::endl;
   }
 
   void DoExport(const std::filesystem::path &folder) override {
-    spdlog::info("Exporting audio data in AAC format to {}.", folder.c_str());
+    std::cout << "Exporting audio data in AAC format to {}." << folder << std::endl;
   }
 };
 
 struct WAVAudioExporter final : public AudioExporter {
   void PrepareExport(std::string_view data) override {
-    spdlog::info("Preparing audio data for WAV export.");
+    std::cout <<"Preparing audio data for WAV export." << std::endl;
   }
 
   void DoExport(const std::filesystem::path &folder) override {
-    spdlog::info("Exporting audio data WAV format to {}.", folder.c_str());
+    std::cout <<"Exporting audio data WAV format to {}." << folder << std::endl;
   }
 };
 
