@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.21)
 project(factory_pattern_cpp)
 
 set(CMAKE_CXX_STANDARD 20)
-
+#alles auf stdout umgesetzt
 #include(${CMAKE_BINARY_DIR}/conan_paths.cmake)
 
 #find_package(spdlog REQUIRED)
